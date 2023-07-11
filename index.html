@@ -28,31 +28,56 @@
         </p>
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
+
       <div class="form-wrapper">
         <form action="" id="register-form">
-         <strong>Let's do this</strong>
-         <div>
+          <strong>Let's do this</strong>
+          <div>
             <div class="field-wrapper">
               <label for="first-name">FIRST NAME</label
-              ><input type="text" id="first-name" name="first-name" />
+              ><input
+                type="text"
+                id="first-name"
+                name="first-name"
+                placeholder="Enter your first name here"
+                required
+              />
               <div class="error-message"></div>
             </div>
 
             <div class="field-wrapper">
               <label for="last-name">LAST NAME</label
-              ><input type="text" id="last-name" name="last-name" />
+              ><input
+                type="text"
+                id="last-name"
+                name="last-name"
+                placeholder="Enter your last name here"
+                required
+              />
               <div class="error-message"></div>
             </div>
           </div>
           <div>
             <div class="field-wrapper">
               <label for="email">EMAIL</label>
-              <input type="email" id="email" name="email" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email here"
+                required
+              />
               <div class="error-message"></div>
             </div>
             <div class="field-wrapper">
               <label for="phone-number">PHONE NUMBER</label
-              ><input type="tel" id="phone-number" name="phone-number" />
+              ><input
+                type="tel"
+                id="phone-number"
+                name="phone-number"
+                placeholder="Enter your phone number here"
+                required
+              />
               <div class="error-message"></div>
             </div>
           </div>
@@ -60,7 +85,12 @@
           <div>
             <div class="field-wrapper">
               <label for="password">PASSWORD</label
-              ><input type="password" id="password" />
+              ><input
+                type="password"
+                id="password"
+                placeholder="Enter your password here"
+                required
+              />
               <div class="error-message"></div>
             </div>
             <div class="field-wrapper">
@@ -69,6 +99,8 @@
                 type="password"
                 id="password-confirm"
                 name="password-confirm"
+                placeholder="Confirm the password"
+                required
               />
               <div class="error-message"></div>
             </div>
@@ -76,7 +108,7 @@
         </form>
       </div>
       <div>
-        <input type="submit" form="register-form" />
+        <input type="submit" form="register-form" required />
         <div>Already have an account?<a href=""> Log in</a></div>
       </div>
     </main>
