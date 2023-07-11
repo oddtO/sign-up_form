@@ -91,7 +91,7 @@ main > div:first-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 2;
+  flex: 1.7;
 }
 
 strong {
@@ -132,7 +132,11 @@ input {
   appearance: none;
   width: 100%;
 }
-
+#register-form label {
+  height: 40px;
+  display: flex;
+  align-items: flex-end;
+}
 input:focus {
   /* border: none; */
   outline: none;
@@ -145,4 +149,19 @@ input:invalid:not(:focus, :placeholder-shown) {
 
 input:placeholder-shown {
   font-size: 13px;
+}
+
+.error-message {
+  height: 30px;
+}
+
+#email + .error-message::before {
+  content: "";
+  color: #ff0000;
+  font-style: italic;
+  font-size: 15px;
+}
+
+#email:invalid:not(:focus, :placeholder-shown) + .error-message::before {
+  content: "* Please, enter a valid email";
 }
