@@ -13,11 +13,10 @@
 
 body {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .logo-wrapper {
-  height: 100%;
   flex: 0.6 1 auto;
   background-image: url("../img/halie-west-25xggax4bSA-unsplash.jpg");
   background-size: cover;
@@ -43,6 +42,8 @@ body {
 
 .logo-wrapper address {
   text-align: center;
+  position: sticky;
+  bottom: 0;
 }
 
 .logo-wrapper address a:visited {
@@ -78,13 +79,17 @@ main > div {
 main > div:first-child {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   gap: 30px;
   font-weight: bold;
   font-size: 20px;
   padding-top: 60px;
   padding-left: var(--user-padding-left);
   padding-right: var(--user-padding-right);
+}
+
+main > div:first-child > p:last-child {
+  padding-bottom: 30px;
 }
 
 .form-wrapper {
@@ -95,13 +100,13 @@ main > div:first-child {
 }
 
 strong {
+  padding: 30px 0;
   font-size: 30px;
 }
 
 #register-form {
   display: flex;
   flex-direction: column;
-  gap: 40px;
 }
 
 #register-form > div {
@@ -152,7 +157,7 @@ input:placeholder-shown {
 }
 
 .error-message {
-  height: 30px;
+  height: 100px;
 }
 
 #email + .error-message::before {
@@ -163,5 +168,30 @@ input:placeholder-shown {
 }
 
 #email:invalid:not(:focus, :placeholder-shown) + .error-message::before {
-  content: "* Please, enter a valid email";
+  content: "* Please, enter a valid email address";
 }
+
+main > div:last-child {
+  padding: 30px 0;
+  padding-left: var(--user-padding-left);
+  --user-submit-color: #6f8f29;
+}
+
+input[type="submit"] {
+  width: 100px;
+  height: 40px;
+  border-radius: 40px;
+  font-size: 15px;
+  background-color: var(--user-submit-color);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+input[type="submit"] + div > a {
+  color: var(--user-submit-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
