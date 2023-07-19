@@ -25,13 +25,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: stretch;
 }
 
 .logo {
-  margin-top: 200px;
   font-family: "Norse Bold";
   font-size: 120px;
+  margin-top: 200px;
   padding: 30px 0;
   background-color: #00000080;
 }
@@ -108,13 +107,11 @@ strong {
 #register-form {
   display: flex;
   flex-direction: column;
-  min-width: fit-content;
 }
 
 #register-form > div {
   display: flex;
   gap: 90px;
-  min-width: 150px;
 }
 
 #register-form {
@@ -150,8 +147,7 @@ input:focus {
   outline: none;
 }
 
-#register-form :is(input:invalid:not(:focus, :placeholder-shown), 
-.password-not-match) {
+#register-form input:invalid:not(:focus, :placeholder-shown) {
   border-color: #fa0000;
   background-color: #ffe6e2;
 }
@@ -161,11 +157,11 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  box-shadow: 0 0 0 30px #ffffff inset !important;
+  box-shadow: 0 0 0 30px #00000000 inset !important;
 }
-input:-webkit-autofill:invalid:not(:focus, :placeholder-shown),
-input:-webkit-autofill:invalid:not(:focus, :placeholder-shown):hover,
-input:-webkit-autofill:invalid:not(:focus, :placeholder-shown):active {
+input:-webkit-autofill:invalid,
+input:-webkit-autofill:invalid:hover,
+input:-webkit-autofill:invalid:active {
   box-shadow: 0 0 0 30px #ffe6e2 inset !important;
 }
 input:placeholder-shown {
@@ -176,7 +172,7 @@ input:placeholder-shown {
   height: 100px;
 }
 
-.error-message::before {
+#email + .error-message::before {
   content: "";
   color: #ff0000;
   font-style: italic;
@@ -185,14 +181,6 @@ input:placeholder-shown {
 
 #email:invalid:not(:focus, :placeholder-shown) + .error-message::before {
   content: "* Please, enter a valid email address";
-}
-
-#phone-number:invalid:not(:focus, :placeholder-shown) + .error-message::before {
-  content: "* Please, enter a valid phone number";
-}
-
-.password-not-match + .error-message::before {
-  content: "* Passwords do not match";
 }
 
 main > div:last-child {

@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/style.css" rel="stylesheet" />
+    <script defer src="js/password-validation.js"></script>
   </head>
   <body>
     <div class="logo-wrapper">
@@ -77,13 +78,14 @@
                 name="phone-number"
                 placeholder="Enter your phone number here"
                 required
+                pattern="[0-9]*"
               />
               <div class="error-message"></div>
             </div>
           </div>
 
-          <div>
-            <div class="field-wrapper">
+          <div id="password-validator">
+            <div class="field-wrapper" >
               <label for="password">PASSWORD</label
               ><input
                 type="password"
